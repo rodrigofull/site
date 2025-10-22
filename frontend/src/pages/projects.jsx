@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from "../components/ProjectCard";
 
-function Projects() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api/github')
-      .then(res => res.json())
-      .then(data => setProjects(data))
-      .catch(err => console.log(err));
-  }, []);
+export default function Projects() {
+  // Array simples com um "projeto" apontando para seu GitHub
+  const projects = [
+    {
+      id: 1,
+      name: "Meus Projetos",
+      description: "Clique abaixo para ver todos os meus projetos no GitHub.",
+      html_url: "https://github.com/rodrigofull" // <- seu GitHub atualizado
+    }
+  ];
 
   return (
     <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -19,5 +19,3 @@ function Projects() {
     </div>
   );
 }
-
-export default Projects;
