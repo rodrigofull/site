@@ -18,8 +18,9 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 .h1{
-color: crimson;
-
+color: rgb(17, 2, 5);
+background-color: black;
+font-weight: bold;
 }
 @keyframes logo-spin {
   from {

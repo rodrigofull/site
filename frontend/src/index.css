@@ -30,13 +30,15 @@ a:hover {
 .h1{
   color: rgb(173, 12, 44);
 }
+/* Para um background simples em toda a página */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-image: url('./assets/topo.jpg');
+  background-size: cover;      /* cobre toda a tela */
+  background-position: center; /* centraliza a imagem */
+  background-repeat: no-repeat;
+  min-height: 100vh;           /* garante que cubra a tela toda */
 }
+
 
 h1 {
   font-size: 2.2em;
